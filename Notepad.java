@@ -67,12 +67,12 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
 	public void actionPerformed(ActionEvent e){	
 		JFileChooser jfc=new JFileChooser();
 		
-		if(e.getActionCommand() == "New"){ 
+		if(e.getActionCommand().equals("New")){ 
 			//new
 			this.setTitle("Untitled.txt - Notepad");
 			jta.setText("");
 			fnameContainer=null;
-		}else if(e.getActionCommand() == "Open"){
+		}else if(e.getActionCommand().equals("Open")){
 			//open
 			int ret=jfc.showDialog(null,"Open");
 			
@@ -86,7 +86,7 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
 				}catch(IOException ers){}
 			}
 			
-		}else if(e.getActionCommand() == "Save"){
+		}else if(e.getActionCommand().equals("Save")){
 			//save
 			if(fnameContainer != null){
 				jfc.setCurrentDirectory(fnameContainer);		
@@ -110,19 +110,19 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
 				}catch(Exception ers2){}
 			}
 			
-		}else if(e.getActionCommand() == "Exit"){
+		}else if(e.getActionCommand().equals("Exit")){
 			//exit
 			Exiting();
-		}else if(e.getActionCommand() == "Copy"){
+		}else if(e.getActionCommand().equals("Copy")){
 			//copy
 			jta.copy();
-		}else if(e.getActionCommand() == "Paste"){
+		}else if(e.getActionCommand().equals("Paste")){
 			//paste
 			jta.paste();
-		}else if(e.getActionCommand() == "About Notepad"){ 
+		}else if(e.getActionCommand().equals("About Notepad")){ 
 			//about
 			JOptionPane.showMessageDialog(this,"Created by: Ferdinand Silva (http://ferdinandsilva.com)","Notepad",JOptionPane.INFORMATION_MESSAGE);
-		}else if(e.getActionCommand() == "Cut"){
+		}else if(e.getActionCommand().equals("Cut")){
 			jta.cut();
 		}
 	}
