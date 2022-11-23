@@ -121,7 +121,7 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
 			jta.paste();
 		}else if(e.getActionCommand().equals("About Notepad")){ 
 			//about
-			JOptionPane.showMessageDialog(this,"Created by: Ferdinand Silva (http://ferdinandsilva.com)","Notepad",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this,"Created by: Ferdinand Silva (https://www.ferdinandsilva.com)","Notepad",JOptionPane.INFORMATION_MESSAGE);
 		}else if(e.getActionCommand().equals("Cut")){
 			jta.cut();
 		}
